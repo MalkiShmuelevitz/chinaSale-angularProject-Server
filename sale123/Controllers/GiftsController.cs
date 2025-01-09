@@ -9,19 +9,27 @@ namespace sale123.Controllers
     [ApiController]
     public class GiftsController : ControllerBase
     {
-        static List<Gift> gifts = new()
-        {
+       public static List<Gift> gifts = new(){
             new Gift(){Id=1,Name="aaa",Donor="lll",Price=10,Image="111.jpg"},
-            new Gift(){Id=2,Name="bbb",Donor="jjj",Price=10,Image="111.jpg"},
-            new Gift(){Id=3,Name="ccc",Donor="fff",Price=10,Image="111.jpg"}
+            new Gift(){Id=2,Name="bbb",Donor="jjj",Price=20,Image="111.jpg"},
+            new Gift(){Id=3,Name="ccc",Donor="fff",Price=10,Image="111.jpg"},
+            new Gift(){Id=4,Name="ddd",Donor="fff",Price=30,Image="111.jpg"},
+            new Gift(){Id=5,Name="eee",Donor="fff",Price=10,Image="111.jpg"},
+            new Gift(){Id=6,Name="fff",Donor="fff",Price=10,Image="111.jpg"},
+            new Gift(){Id=7,Name="ggg",Donor="fff",Price=10,Image="111.jpg"},
+            new Gift(){Id=8,Name="dds",Donor="fff",Price=10,Image="111.jpg"},
+            new Gift(){Id=9,Name="www",Donor="fff",Price=10,Image="111.jpg"},
         };
         // GET: api/<GiftsController>
         [HttpGet]
-        public IEnumerable<Gift> Get()
+        public List<Gift> Get()
         {
             return gifts;
         }
-
+        //public List<Gift> GetGiftsList()
+        //{
+        //    return gifts;
+        //}
         // GET api/<GiftsController>/5
         [HttpGet("{id}")]
         public Gift Get(int id)

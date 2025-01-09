@@ -11,17 +11,17 @@ namespace sale123.Controllers
     {
         static List<User> Users = new List<User>()
         {
-            new User(){Id=1, fullName="aaa",Adress="trye",Phone="10",Email="112"},
-            new User(){Id=2, fullName="bbb",Adress="yrte",Phone="10",Email="5324"},
-            new User(){Id=3, fullName="ccc",Adress="fhgd",Phone="20",Email="2354"},
-            new User(){Id=4, fullName="ddd",Adress="hdfg",Phone="30",Email="5342"},
+            new User(){Id=1, FullName="aaa",Password="aaa",Adress="trye",Phone="10",Email="1@1.1"},
+            new User(){Id=2, FullName="bbb",Password="ccc",Adress="yrte",Phone="10",Email="2@2.2"},
+            new User(){Id=3, FullName="ccc",Password="ddd",Adress="fhgd",Phone="20",Email="11@2.3"},
+            new User(){Id=4, FullName="ddd",Password="eee",Adress="hdfg",Phone="30",Email="11@2.4"},
         };
         // GET: api/<UsersController>
-        //[HttpGet]
-        //public IEnumerable<User> Get()
-        //{
-        //    return Users;
-        //}
+        [HttpGet]
+        public List<User> Get()
+        {
+            return Users;
+        }
 
         //// GET api/<UsersController>/5
         //[HttpGet("{id}")]
@@ -29,14 +29,23 @@ namespace sale123.Controllers
         //{
         //    return Users.Find(d => d.Id == id);
         //}
-
         // POST api/<UsersController>
         [HttpPost]
-        public User Post([FromBody] User user)
+        [Route("login")]
+        public ActionResult<User> Post([FromBody] UserLogin userl)
+        {
+            User user = Users.Find(u => u.Email == userl.UserName && u.Password == userl.Password);
+            if(user!=null)
+                return Ok(user);
+            return NoContent();
+        }
+        // POST api/<UsersController>
+        [HttpPost]
+        public ActionResult<User> Post([FromBody] User user)
         {
             user.Id = CreateId();
             Users.Add(user);
-            return user;
+            return Ok(user);
         }
 
         // PUT api/<UsersController>/5
