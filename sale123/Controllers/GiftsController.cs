@@ -9,16 +9,18 @@ namespace sale123.Controllers
     [ApiController]
     public class GiftsController : ControllerBase
     {
-       public static List<Gift> gifts = new(){
-            new Gift(){Id=1,Name="aaa",Donor="lll",Price=10,Image="111.jpg"},
-            new Gift(){Id=2,Name="bbb",Donor="jjj",Price=20,Image="111.jpg"},
-            new Gift(){Id=3,Name="ccc",Donor="fff",Price=10,Image="111.jpg"},
-            new Gift(){Id=4,Name="ddd",Donor="fff",Price=30,Image="111.jpg"},
-            new Gift(){Id=5,Name="eee",Donor="fff",Price=10,Image="111.jpg"},
-            new Gift(){Id=6,Name="fff",Donor="fff",Price=10,Image="111.jpg"},
-            new Gift(){Id=7,Name="ggg",Donor="fff",Price=10,Image="111.jpg"},
-            new Gift(){Id=8,Name="dds",Donor="fff",Price=10,Image="111.jpg"},
-            new Gift(){Id=9,Name="www",Donor="fff",Price=10,Image="111.jpg"},
+      static List<Gift> gifts = new()
+        {
+            new Gift(){Id=1,Name="Shnat Limudim",Donor="Mby",Price=40,Image="111.jpg"},
+            new Gift(){Id=2,Name="Pamotim",Donor="Mitzhalot",Price=10,Image="111.jpg"},
+            new Gift(){Id=3,Name="Event",Donor="Shira Chadasha",Price=20,Image="111.jpg"},
+            new Gift(){Id=4,Name="Camera",Donor="Refaeli",Price=10,Image="111.jpg"},
+            new Gift(){Id=5,Name="Smash Cake",Donor="Yeudit Avramovsky",Price=10,Image="111.jpg"},
+            new Gift(){Id=6,Name="Wigs",Donor="Chaya Shteinberger",Price=10,Image="111.jpg"},
+            new Gift(){Id=7,Name="Manui Ktifa",Donor="Yated",Price=10,Image="111.jpg"},
+            new Gift(){Id=8,Name="Event2",Donor="Shira Chadasha",Price=10,Image="111.jpg"},
+            new Gift(){Id=9,Name="Event3",Donor="Shira Chadasha",Price=10,Image="111.jpg"},
+            new Gift(){Id=10,Name="Event4",Donor="Shira Chadasha",Price=10,Image="111.jpg"}
         };
         // GET: api/<GiftsController>
         [HttpGet]

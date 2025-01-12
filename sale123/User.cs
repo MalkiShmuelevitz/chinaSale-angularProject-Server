@@ -19,5 +19,9 @@ namespace sale123
 
         [Required]
         public string Phone { get; set; }
+        [Required]
+        public string CreditCard { get; set; }
+        [Required]
+        public string Role { get; set; }
     }
 }

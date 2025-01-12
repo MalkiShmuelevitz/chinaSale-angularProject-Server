@@ -11,10 +11,13 @@ namespace sale123.Controllers
     {
         static List<Donor> donors = new List<Donor>()
         {
-            new Donor(){Id=1, fullName="Chaya",Adress="trye",Phone="10",Email="112"},
-            new Donor(){Id=2, fullName="ddsd",Adress="yrte",Phone="10",Email="5324"},
-            new Donor(){Id=3, fullName="hdgf",Adress="fhgd",Phone="20",Email="2354"},
-            new Donor(){Id=4, fullName="dgf",Adress="hdfg",Phone="30",Email="5342"},
+            new Donor(){Id=1, fullName="Shira Chadasha",Adress="trye",Phone="10",Email="5342@q"},
+            new Donor(){Id=2, fullName="Chaya Shteinberger",Adress="yrte",Phone="10",Email="5342@q"},
+            new Donor(){Id=3, fullName="Mitzhalot",Adress="fhgd",Phone="20",Email="5342@q"},
+            new Donor(){Id=4, fullName="Mby",Adress="hdfg",Phone="30",Email="5342@q"},
+            new Donor(){Id=5, fullName="Refaeli",Adress="hdfg",Phone="30",Email="5342@q"},
+            new Donor(){Id=6, fullName="Yeudit Avramovsky",Adress="hdfg",Phone="30",Email="5342@q"},
+            new Donor(){Id=7, fullName="Yated",Adress="hdfg",Phone="30",Email="5342@q"},
         };
         // GET: api/<DonorsController>
         [HttpGet]

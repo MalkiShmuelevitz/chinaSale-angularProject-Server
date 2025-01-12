@@ -10,9 +10,10 @@ namespace sale123.Controllers
     public class GiftsWithUsersController : ControllerBase
     {
        public static List<GiftWithUser> giftsWithUsers=new();
-
+       static bool flag = false;
         public GiftsWithUsersController()
         {
+            if (!flag) { 
             GiftsController g1 = new();
             List<Gift> newgifts = g1.Get();
             for (int i = 0; i < newgifts.Count; i++)
@@ -29,10 +30,18 @@ namespace sale123.Controllers
                     Winner = new User()
                 });
             }
+                flag=true;
+            }
+        }
+        [HttpGet]
+        public List<GiftWithUser> GetAll()
+        { 
+            return giftsWithUsers;
         }
 
-        // GET: api/<GiftsWithUsersController>
+            // GET: api/<GiftsWithUsersController>
         [HttpGet]
+        [Route("random")]
         public List<GiftWithUser> Get()
         {
             //CHECK WHY IS MUNY PLACES IN GIFTS!!!!
@@ -40,8 +49,11 @@ namespace sale123.Controllers
             for (int i = 0; i < giftsWithUsers.Count; i++)
             {
                 int len = giftsWithUsers[i].UsersList.Count;
-                int rnd= random.Next(0, len);
-                giftsWithUsers[i].Winner = giftsWithUsers[i].UsersList[rnd];
+                if (len>0)
+                {
+                    int rnd = random.Next(0, len);
+                    giftsWithUsers[i].Winner = giftsWithUsers[i].UsersList[rnd];
+                }
             }
             return giftsWithUsers;
         }
@@ -62,12 +74,13 @@ namespace sale123.Controllers
             ///.///////////////////////////////
             for (int i = 0; i < gifts.Count; i++)
             {
-                int index= giftsWithUsers.FindIndex(g => g.Id == gifts[i].Id);
+                int index = giftsWithUsers.FindIndex(g => g.Id == gifts[i].Id);
+
                 for (int j = 0; j < gifts[i].Quantity; j++)
                 {
-                    UsersController usersController=new();
+                    UsersController usersController = new();
                     //if not found
-                    User user = usersController.Get().Find(u=>u.Email==username);
+                    User user = usersController.Get().Find(u => u.Email == username);
                     giftsWithUsers[index].UsersList.Add(user);
                 }
             }

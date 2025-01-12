@@ -11,10 +11,10 @@ namespace sale123.Controllers
     {
         static List<User> Users = new List<User>()
         {
-            new User(){Id=1, FullName="aaa",Password="aaa",Adress="trye",Phone="10",Email="1@1.1"},
-            new User(){Id=2, FullName="bbb",Password="ccc",Adress="yrte",Phone="10",Email="2@2.2"},
-            new User(){Id=3, FullName="ccc",Password="ddd",Adress="fhgd",Phone="20",Email="11@2.3"},
-            new User(){Id=4, FullName="ddd",Password="eee",Adress="hdfg",Phone="30",Email="11@2.4"},
+            new User(){Id=1, FullName="aaa",Password="aaa",Adress="trye",Phone="10",Email="1@1.1",CreditCard="234424234",Role="Admin"},
+            new User(){Id=2, FullName="bbb",Password="ccc",Adress="yrte",Phone="10",Email="2@2.2",CreditCard="346334454",Role="User"},
+            new User(){Id=3, FullName="ccc",Password="ddd",Adress="fhgd",Phone="20",Email="3@3.3",CreditCard="423434343",Role="User"},
+            new User(){Id=4, FullName="ddd",Password="eee",Adress="hdfg",Phone="30",Email="4@4.4",CreditCard="234423434",Role="User"},
         };
         // GET: api/<UsersController>
         [HttpGet]
@@ -44,6 +44,7 @@ namespace sale123.Controllers
         public ActionResult<User> Post([FromBody] User user)
         {
             user.Id = CreateId();
+            user.Role = "User";
             Users.Add(user);
             return Ok(user);
         }
