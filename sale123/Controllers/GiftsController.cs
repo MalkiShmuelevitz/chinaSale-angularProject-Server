@@ -35,7 +35,6 @@ namespace sale123.Controllers
 
         [HttpGet]
         [Route("random")]
-
         public List<Gift> GetWithWinner()
         {
             Random random = new();

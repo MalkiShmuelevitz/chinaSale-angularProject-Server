@@ -5,8 +5,6 @@ namespace sale123
 {
     public class Gift
     {
-      
-
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
