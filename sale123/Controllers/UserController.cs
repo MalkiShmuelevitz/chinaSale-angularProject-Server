@@ -45,8 +45,12 @@ namespace sale123.Controllers
         {
             user.Id = CreateId();
             user.Role = "User";
-            Users.Add(user);
-            return Ok(user);
+            if (Users.FindIndex((u) => u.Email==user.Email) > -1)
+                //check with action result to return
+                return NotFound();
+            else
+                Users.Add(user);
+                return Ok(user);
         }
 
         // PUT api/<UsersController>/5

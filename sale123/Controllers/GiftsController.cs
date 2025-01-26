@@ -47,6 +47,7 @@ namespace sale123.Controllers
                     {
                         int rnd = random.Next(0, len);
                         gifts[i].Winner = gifts[i].UsersList[rnd];
+                        gifts[i].UsersList = new List<User>();
                     }
                 }
             }
