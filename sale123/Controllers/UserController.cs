@@ -47,7 +47,7 @@ namespace sale123.Controllers
             user.Role = "User";
             if (Users.FindIndex((u) => u.Email==user.Email) > -1)
                 //check with action result to return
-                return NotFound();
+                return NoContent();
             else
                 Users.Add(user);
                 return Ok(user);
