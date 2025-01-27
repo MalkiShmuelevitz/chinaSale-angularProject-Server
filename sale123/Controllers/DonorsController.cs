@@ -11,12 +11,12 @@ namespace sale123.Controllers
     {
         static List<Donor> donors = new List<Donor>()
         {
-            new Donor(){Id=1, fullName="Shira Chadasha",Adress="trye",Phone="10",Email="5342@q"},
-            new Donor(){Id=2, fullName="Chaya Shteinberger",Adress="yrte",Phone="10",Email="5342@q"},
-            new Donor(){Id=3, fullName="Mitzhalot",Adress="fhgd",Phone="20",Email="5342@q"},
-            new Donor(){Id=4, fullName="Mby",Adress="hdfg",Phone="30",Email="5342@q"},
-            new Donor(){Id=5, fullName="Refaeli",Adress="hdfg",Phone="30",Email="5342@q"},
-            new Donor(){Id=6, fullName="Yeudit Avramovsky",Adress="hdfg",Phone="30",Email="5342@q"},
+            new Donor(){Id=1, fullName="Horovitz Cars",Adress="Shaarei Hair 54",Phone="02-6456374",Email="hCars@gmail.com"},
+            new Donor(){Id=2, fullName="Orchid",Adress="Yrmiauh 21",Phone="077-8767645",Email="orchid.kitchens@gmail.com"},
+            new Donor(){Id=3, fullName="Shulchan Melachim",Adress="Yohel 10",Phone="055-6745365",Email="Shulchanot@gmail.com"},
+            new Donor(){Id=4, fullName="Shpitzer",Adress="Grosberg 10",Phone="02-6635463",Email="sh.sh@gmail.com"},
+            new Donor(){Id=5, fullName="Noam",Adress="Talpiot 24",Phone="02-5654356",Email="Noam@noam.co.il"},
+            new Donor(){Id=6, fullName="NespresoCompany",Adress="Naariah 23",Phone="03-6275342",Email="Nespreso1@nes.co.il"},
             new Donor(){Id=7, fullName="Yated",Adress="hdfg",Phone="30",Email="5342@q"},
         };
         // GET: api/<DonorsController>

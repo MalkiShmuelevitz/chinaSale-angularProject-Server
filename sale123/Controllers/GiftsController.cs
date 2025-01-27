@@ -12,12 +12,12 @@ namespace sale123.Controllers
         
       static List<Gift> gifts = new()
         {
-            new Gift(){Id=1,Name="Shnat Limudim",Donor="Mby",Price=40,Image="111.jpg",UsersList=new List<User>(),Winner=null},
-            new Gift(){Id=2,Name="Pamotim",Donor="Mitzhalot",Price=10,Image="111.jpg",UsersList=new List<User>(),Winner=null},
-            new Gift(){Id=3,Name="Event",Donor="Shira Chadasha",Price=20,Image="111.jpg",UsersList=new List<User>(),Winner=null},
-            new Gift(){Id=4,Name="Camera",Donor="Refaeli",Price=10,Image="111.jpg",UsersList=new List<User>(),Winner=null},
-            new Gift(){Id=5,Name="Smash Cake",Donor="Yeudit Avramovsky",Price=10,Image="111.jpg",UsersList=new List<User>(),Winner=null},
-            new Gift(){Id=6,Name="Wigs",Donor="Chaya Shteinberger",Price=10,Image="111.jpg",UsersList=new List<User>(),Winner=null},
+            new Gift(){Id=1,Name="Car",Donor="Horovitz Cars",Price=35,Image="1.jpg",UsersList=new List<User>(),Winner=null},
+            new Gift(){Id=2,Name="Kitchen",Donor="Orchid",Price=35,Image="4.jpg",UsersList=new List<User>(),Winner=null},
+            new Gift(){Id=3,Name="Sofas",Donor="Shulchan Melachim",Price=10,Image="5.jpg",UsersList=new List<User>(),Winner=null},
+            new Gift(){Id=4,Name="Children Room",Donor="Shpitzer",Price=10,Image="6.jpg",UsersList=new List<User>(),Winner=null},
+            new Gift(){Id=5,Name="Mini Bar",Donor="Noam",Price=10,Image="2.jpg",UsersList=new List<User>(),Winner=null},
+            new Gift(){Id=6,Name="Nespreso",Donor="NespresoCompany",Price=10,Image="3.jpg",UsersList=new List<User>(),Winner=null},
             new Gift(){Id=7,Name="Manui Ktifa",Donor="Yated",Price=10,Image="111.jpg",UsersList=new List<User>(),Winner=null},
             new Gift(){Id=8,Name="Event2",Donor="Shira Chadasha",Price=10,Image="111.jpg",UsersList=new List<User>(),Winner=null},
             new Gift(){Id=9,Name="Event3",Donor="Shira Chadasha",Price=10,Image="111.jpg",UsersList=new List<User>(),Winner=null},
