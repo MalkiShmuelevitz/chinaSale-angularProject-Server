@@ -17,7 +17,10 @@ namespace sale123.Controllers
             new Donor(){Id=4, fullName="Shpitzer",Adress="Grosberg 10",Phone="02-6635463",Email="sh.sh@gmail.com"},
             new Donor(){Id=5, fullName="Noam",Adress="Talpiot 24",Phone="02-5654356",Email="Noam@noam.co.il"},
             new Donor(){Id=6, fullName="NespresoCompany",Adress="Naariah 23",Phone="03-6275342",Email="Nespreso1@nes.co.il"},
-            new Donor(){Id=7, fullName="Yated",Adress="hdfg",Phone="30",Email="5342@q"},
+            new Donor(){Id=7, fullName="Shoam",Adress="Yrmiauh 33",Phone="02-5647635",Email="shoamdishes@gmail.com"},
+            new Donor(){Id=8, fullName="Anonimyous",Adress="null",Phone="00-0000000",Email="anonimi@gmail.com"},
+            new Donor(){Id=7, fullName="Naaman",Adress="Kenion ramot 360",Phone="02-6635867",Email="naaman@gmail.com"},
+            new Donor(){Id=10, fullName="Refaeli",Adress="Micha 12",Phone="0583245654",Email="Refal@gmail.com"},
         };
         // GET: api/<DonorsController>
         [HttpGet]
@@ -56,7 +59,8 @@ namespace sale123.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            donors.Remove(donors.Find(d => d.Id == id));
+            Donor d = donors.Find(g => g.Id == id);
+            donors.Remove(d);
         }
 
         protected int CreateId()

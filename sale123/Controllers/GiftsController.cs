@@ -18,10 +18,10 @@ namespace sale123.Controllers
             new Gift(){Id=4,Name="Children Room",Donor="Shpitzer",Price=10,Image="6.jpg",UsersList=new List<User>(),Winner=null},
             new Gift(){Id=5,Name="Mini Bar",Donor="Noam",Price=10,Image="2.jpg",UsersList=new List<User>(),Winner=null},
             new Gift(){Id=6,Name="Nespreso",Donor="NespresoCompany",Price=10,Image="3.jpg",UsersList=new List<User>(),Winner=null},
-            new Gift(){Id=7,Name="Manui Ktifa",Donor="Yated",Price=10,Image="111.jpg",UsersList=new List<User>(),Winner=null},
-            new Gift(){Id=8,Name="Event2",Donor="Shira Chadasha",Price=10,Image="111.jpg",UsersList=new List<User>(),Winner=null},
-            new Gift(){Id=9,Name="Event3",Donor="Shira Chadasha",Price=10,Image="111.jpg",UsersList=new List<User>(),Winner=null},
-            new Gift(){Id=10,Name="Event4",Donor="Shira Chadasha",Price=10,Image="111.jpg",UsersList=new List<User>(),Winner=null}
+            new Gift(){Id=7,Name="Dishes",Donor="Shoam",Price=10,Image="7.jpg",UsersList=new List<User>(),Winner=null},
+            new Gift(){Id=8,Name="Surprise Gift",Donor="Anonimyous",Price=10,Image="8.jpg",UsersList=new List<User>(),Winner=null},
+            new Gift(){Id=9,Name="Shabbos table",Donor="Naaman",Price=10,Image="9.jpg",UsersList=new List<User>(),Winner=null},
+            new Gift(){Id=10,Name="Camera",Donor="Refaeli",Price=10,Image="10.jpg",UsersList=new List<User>(),Winner=null}
         };
 
         
